@@ -12,7 +12,15 @@ ZMDC was not designed using feedback from a particular compression algorithm. Pa
 
 ## Reference corpus and distribution
 
-The reference corpus contains 13 primary files (1,000,037,807 bytes), plus README and manifest. Its complete [file manifest](manifests/ZMDC-1G-v1.json) is included here. Bulk data will be hosted separately; a download URL will be added when that server is available. For now, generate it locally using the commands below.
+The reference corpus contains 13 primary files (1,000,037,807 bytes), plus README and manifest. Its complete [file manifest](manifests/ZMDC-1G-v1.json) is included here.
+
+ZMDC-1G v1.0 is published as a pre-generated release asset so a benchmark can start with download → checksum verification → extraction, without first regenerating 1 GB locally. The release contains:
+
+- `ZMDC-1G-v1.tar.zst` — the frozen pre-generated corpus tree.
+- `ZMDC-1G-v1.manifest.json` — the frozen reference manifest.
+- `SHA256SUMS` — checksums for the downloadable assets.
+
+See [DISTRIBUTION.md](DISTRIBUTION.md) for download, verification and extraction instructions. The tagged GitHub release also provides the generator source archives.
 
 The corpus was frozen before external compression comparisons. Those later experiments did not change the generator, configuration or reference data. This repository publishes the corpus project independently of codec rankings.
 
@@ -122,11 +130,13 @@ python3 -m unittest discover -s tests -v
 
 Tests cover deterministic trees/manifests, different-seed divergence, alternative encoding round trips, binary corruption, missing references, invalid schemas and illegal state transitions. Reports from the actual 10MB, 100MB and 1GB runs live in `reports/`. See `IMPLEMENTATION_REPORT.md` for the final measured sizes, hashes, validation results and limitations.
 
+CI runs the frozen golden test on the reference runtime, CPython 3.12.10. A separate compatibility matrix runs on Ubuntu, macOS and Windows with Python 3.11, 3.12 and 3.13 without claiming byte-identical corpus output across runtimes.
+
 ## Reproducibility and publication
 
 Separate named PRNG streams derive from the seed by SHA-256. IDs and opaque fields derive from explicit domains. No uncontrolled RNG, wall time, path name or output directory enters corpus bytes. Canonical serialization fixes field order and whitespace; floats are rounded. The reference guarantee is for a given implementation, version and runtime. Cross-runtime/distribution-library equivalence is not assumed; record the manifest runtime and retain the source.
 
-`FREEZE.json` preserves the original pre-benchmark freeze record. This repository publishes that unchanged generator and the original corpus manifest; its historical local status describes the time of freezing. Before public release, independent review and domain calibration remain appropriate. Once published, preserve that exact source/configuration, and make any material change under a new version.
+`FREEZE.json` preserves the original pre-benchmark freeze record. This repository publishes that unchanged generator and the original corpus manifest; its historical local status describes the time of freezing. Once published, preserve that exact source/configuration, and make any material change under a new version.
 
 ## Project layout
 
