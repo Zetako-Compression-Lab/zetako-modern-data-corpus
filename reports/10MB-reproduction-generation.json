@@ -1,0 +1,9 @@
+{
+  "corpus": "outputs/ZMDC-10M-v1-reproduction",
+  "generation_seconds": 0.25910312500127475,
+  "global_sha256": "927d4334ee1fb6d4923804ee30ba56152035fd9b2488a195fd1f23d34deb4d09",
+  "peak_rss_bytes": 32325632,
+  "primary_bytes": 10014335,
+  "records": 9516,
+  "total_bytes": 10014753
+}

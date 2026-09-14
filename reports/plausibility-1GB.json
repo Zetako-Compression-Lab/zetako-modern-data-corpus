@@ -1,0 +1,89 @@
+{
+  "active_users": 25391,
+  "api_unique_records": 150172,
+  "correlations": {
+    "current_power": {
+      "pairs": 147498,
+      "pearson_r": 0.9998684721127925
+    },
+    "request_rate_cpu": {
+      "pairs": 27673,
+      "pearson_r": 0.993030670681499
+    },
+    "temperature_fan": {
+      "pairs": 147498,
+      "pearson_r": 0.9859910431741284
+    }
+  },
+  "device_state_counts": {
+    "degraded": 728,
+    "failed": 109,
+    "running": 146661
+  },
+  "endpoint_counts": {
+    "/api/auth": 22509,
+    "/api/devices": 2987,
+    "/api/files": 31312,
+    "/api/messages": 45176,
+    "/api/notifications": 6101,
+    "/api/search": 12244,
+    "/api/transactions": 4533,
+    "/api/users": 8958,
+    "/api/workspaces": 16352
+  },
+  "endpoint_shares": {
+    "/api/auth": 0.14988812827957276,
+    "/api/devices": 0.01989052553072477,
+    "/api/files": 0.20850757797725275,
+    "/api/messages": 0.3008283834536398,
+    "/api/notifications": 0.04062674799563168,
+    "/api/search": 0.08153317529233146,
+    "/api/transactions": 0.03018538742242229,
+    "/api/users": 0.05965159949924087,
+    "/api/workspaces": 0.1088884745491836
+  },
+  "firmware_counts": {
+    "2.3.1": 67110,
+    "2.4.0": 80388
+  },
+  "interpretation": "Descriptive synthetic mechanisms, not external calibration or proof of representativeness.",
+  "observation_hour_utc_counts": {
+    "0": 2007,
+    "1": 1998,
+    "10": 8744,
+    "11": 8754,
+    "12": 8754,
+    "13": 8761,
+    "14": 8731,
+    "15": 9389,
+    "16": 9400,
+    "17": 9395,
+    "18": 9394,
+    "19": 6014,
+    "2": 2001,
+    "20": 6016,
+    "21": 6017,
+    "22": 6009,
+    "23": 6017,
+    "3": 2001,
+    "4": 1996,
+    "5": 1998,
+    "6": 6008,
+    "7": 5998,
+    "8": 6015,
+    "9": 8755
+  },
+  "status_counts": {
+    "200": 94715,
+    "201": 18307,
+    "204": 15335,
+    "400": 3079,
+    "401": 4558,
+    "403": 1564,
+    "404": 4542,
+    "429": 4506,
+    "500": 1771,
+    "503": 1795
+  },
+  "top_100_user_share": 0.4029912367152332
+}

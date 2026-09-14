@@ -1,0 +1,559 @@
+{
+  "manifest": {
+    "global_sha256": "927d4334ee1fb6d4923804ee30ba56152035fd9b2488a195fd1f23d34deb4d09",
+    "name": "ZMDC-development",
+    "primary_bytes": 10014335,
+    "records": 9516,
+    "seed": 20260914,
+    "version": "1.0"
+  },
+  "samples": {
+    "api/events.jsonl": [
+      {
+        "api_version": "v1",
+        "authentication_method": "session_cookie",
+        "client_type": "web",
+        "clock_drift_ms": 0,
+        "delivery_delay_ms": 74,
+        "endpoint": "/api/messages",
+        "error_type": null,
+        "event_id": "3267dab6eeaf568672c74578",
+        "idempotency_key": "389811b774024111d91c7bd6",
+        "instance_id": 103,
+        "is_duplicate": false,
+        "kind": "api_request",
+        "latency_ms": 26.008,
+        "legacy_collector": "collector-v1",
+        "load_index": 0.3922,
+        "metadata": {
+          "environment": "production",
+          "sampling_weight": 1,
+          "tenant_tier": "team"
+        },
+        "method": "POST",
+        "observed_timestamp_ms": 1767225600000,
+        "optional_context": {
+          "zone": "ap-east-2"
+        },
+        "organization_id": 55,
+        "payload_size": 422,
+        "quality": [],
+        "record_id": "e1443d8d0678106cfe6561bc",
+        "region": "ap-east",
+        "request_id": "5b630d3c1f25f15b1a116f8732b26cff",
+        "response_size": 691,
+        "retry_attempt": 0,
+        "schema_version": "1.0",
+        "service": "messages",
+        "session_id": "a3c091de66212b1c069ee63c",
+        "status_code": 200,
+        "timestamp_ms": 1767225599926,
+        "trace_id": "a20e5ed5600f5bdcee17a5a93ba69ddd",
+        "user_id": 55
+      }
+    ],
+    "binary/records.bin": [
+      {
+        "api_request_id": "5b630d3c1f25f15b1a116f8732b26cff",
+        "clock_drift_ms": 501,
+        "counters": [
+          0,
+          0,
+          26
+        ],
+        "delivery_delay_ms": 39,
+        "description": "independent compact edge observation",
+        "device_id": 4805,
+        "event_id": "11ac40b3c00317676e620013",
+        "flags": 0,
+        "instance_id": 103,
+        "is_duplicate": false,
+        "kind": "telemetry",
+        "legacy_collector": "collector-v1",
+        "linked_trace_id": "a20e5ed5600f5bdcee17a5a93ba69ddd",
+        "metadata": {
+          "environment": "production",
+          "sampling_weight": 1,
+          "tenant_tier": "team"
+        },
+        "observed_timestamp_ms": 1767225600000,
+        "optional_context": {
+          "zone": "ap-east-2"
+        },
+        "organization_id": 55,
+        "payload": "511664eac2be64c1c76d7a1a23551946eff60c6de43a1d3c309e9db52382e612",
+        "quality": [
+          "clock_drift"
+        ],
+        "record_id": "3f6b9254b1eb681910b8126a",
+        "region": "ap-east",
+        "sample_number": 0,
+        "schema_version": "1.0",
+        "service": "messages",
+        "timestamp_ms": 1767225600462,
+        "user_id": 55,
+        "values": [
+          0.71775,
+          -0.4544,
+          -1.41996,
+          -0.12059,
+          -1.18188,
+          -1.22045,
+          0.18938,
+          -0.29558
+        ]
+      }
+    ],
+    "collaboration/events.jsonl": [
+      {
+        "api_request_id": "5b630d3c1f25f15b1a116f8732b26cff",
+        "channel_id": 5500,
+        "clock_drift_ms": 0,
+        "delivery_delay_ms": 19,
+        "event_id": "70f0eb1c4a4aa404b7994008",
+        "event_type": "message",
+        "file": null,
+        "instance_id": 103,
+        "is_duplicate": false,
+        "kind": "collaboration",
+        "legacy_collector": "collector-v1",
+        "linked_trace_id": "a20e5ed5600f5bdcee17a5a93ba69ddd",
+        "meeting_duration_minutes": null,
+        "mentions": [],
+        "message_id": "d8f6fac7695de5a3e2ce851d",
+        "metadata": {
+          "environment": "production",
+          "sampling_weight": 1,
+          "tenant_tier": "team"
+        },
+        "observed_timestamp_ms": 1767225600000,
+        "optional_context": {
+          "zone": "ap-east-2"
+        },
+        "organization_id": 55,
+        "presence": "busy",
+        "quality": [],
+        "reaction": null,
+        "record_id": "2588f35bef57eac739bb86d2",
+        "region": "ap-east",
+        "schema_version": "1.0",
+        "service": "messages",
+        "text": "The support ticket has moved to the next stage. I will post a summary after the checks.",
+        "timestamp_ms": 1767225599981,
+        "user_id": 55,
+        "workspace_id": 55
+      }
+    ],
+    "database/cdc.jsonl": [
+      {
+        "after": {
+          "organization_id": 55,
+          "owner_user_id": 55,
+          "revision": 1,
+          "state": "active",
+          "updated_at_ms": 1767225599939,
+          "value": 3060
+        },
+        "api_request_id": "5b630d3c1f25f15b1a116f8732b26cff",
+        "before": null,
+        "clock_drift_ms": 0,
+        "delivery_delay_ms": 61,
+        "event_id": "6770380cfcee41fd33e689e4",
+        "instance_id": 103,
+        "is_duplicate": false,
+        "kind": "cdc",
+        "legacy_collector": "collector-v1",
+        "linked_trace_id": "a20e5ed5600f5bdcee17a5a93ba69ddd",
+        "metadata": {
+          "environment": "production",
+          "sampling_weight": 1,
+          "tenant_tier": "team"
+        },
+        "observed_timestamp_ms": 1767225600000,
+        "operation": "INSERT",
+        "optional_context": {
+          "zone": "ap-east-2"
+        },
+        "organization_id": 55,
+        "primary_key": "375e6be354f5bdac211e6292",
+        "quality": [],
+        "record_id": "45cf5f1e1c0b18956c1c0f01",
+        "region": "ap-east",
+        "schema_version": "1.0",
+        "sequence": 1,
+        "service": "messages",
+        "table": "messages",
+        "timestamp_ms": 1767225599939,
+        "transaction_id": "67fad9b928b695cfe3b7ee0f",
+        "user_id": 55
+      }
+    ],
+    "entropy-control/control.bin": [
+      {
+        "api_request_id": "5b630d3c1f25f15b1a116f8732b26cff",
+        "clock_drift_ms": 0,
+        "control_type": "opaque_blob",
+        "delivery_delay_ms": 32,
+        "event_id": "dd6e4580a38f670ad7e8a0df",
+        "instance_id": 103,
+        "is_duplicate": false,
+        "kind": "control",
+        "legacy_collector": "collector-v1",
+        "linked_trace_id": "a20e5ed5600f5bdcee17a5a93ba69ddd",
+        "metadata": {
+          "environment": "production",
+          "sampling_weight": 1,
+          "tenant_tier": "team"
+        },
+        "nonce": "a32e599c478344972eb42f1005387c68",
+        "observed_timestamp_ms": 1767225600000,
+        "optional_context": {
+          "zone": "ap-east-2"
+        },
+        "organization_id": 55,
+        "payload": {
+          "bytes": 32768,
+          "preview_hex": "725aadc2ef6b7b9431141850427944471f4ed9b08b16ec388c144216943ecbf4"
+        },
+        "quality": [],
+        "record_id": "1ce090cd5fb65230bd815800",
+        "region": "ap-east",
+        "schema_version": "1.0",
+        "service": "messages",
+        "timestamp_ms": 1767225599968,
+        "token": "54b441c9ca13cbbaf88e8eec8ec6ae97a42fc043e6908b2d4503eb9e45785bdc",
+        "user_id": 55
+      }
+    ],
+    "logs/application.log": [
+      {
+        "api_request_id": "a80a1ce7182b168a79ea142b9f3054ab",
+        "clock_drift_ms": 0,
+        "delivery_delay_ms": 17,
+        "destination_ip": "198.51.100.106",
+        "event_id": "36a43f6838170658e9c7be69",
+        "instance_id": 105,
+        "is_duplicate": false,
+        "kind": "log",
+        "legacy_collector": "collector-v1",
+        "linked_trace_id": "9ef8e94b05f8c7c80a2fe2d85c2949d0",
+        "log_category": "application",
+        "message": "replica connection recovered; resource=/org/17/items/4; correlation=a80a1ce7182b168a79ea142b9f3054ab; the queued operation was deferred until the next lease window",
+        "observed_timestamp_ms": 1767248441280,
+        "optional_context": {
+          "zone": "ap-east-1"
+        },
+        "organization_id": 17,
+        "path": "/var/lib/service-105/segments/0004",
+        "pid": 1105,
+        "quality": [
+          "missing"
+        ],
+        "record_id": "56305dcd5778232bb1d1678a",
+        "region": "ap-east",
+        "request_id": "a80a1ce7182b168a79ea142b9f3054ab",
+        "schema_version": "1.0",
+        "service": "workspaces",
+        "severity": "INFO",
+        "source_ip": "192.0.2.18",
+        "status_code": 200,
+        "timestamp_ms": 1767248441263,
+        "user_id": 17
+      }
+    ],
+    "logs/audit.jsonl": [
+      {
+        "api_request_id": "1c18168ce1f4515d3b58e2afab636a3f",
+        "clock_drift_ms": 0,
+        "delivery_delay_ms": 257920,
+        "destination_ip": "198.51.100.85",
+        "event_id": "eaafc3aa8cb062c7ae1e12ac",
+        "instance_id": 84,
+        "is_duplicate": false,
+        "kind": "log",
+        "legacy_collector": "collector-v1",
+        "linked_trace_id": "2847e7af7f3cdc0146e2045c2c07c9af",
+        "log_category": "security",
+        "message": "authentication succeeded for synthetic user 25997",
+        "metadata": {
+          "environment": "production",
+          "sampling_weight": 1,
+          "tenant_tier": "enterprise"
+        },
+        "observed_timestamp_ms": 1767258938550,
+        "optional_context": {
+          "zone": "ap-south-1"
+        },
+        "organization_id": 497,
+        "path": "/var/lib/service-84/segments/0009",
+        "pid": 1084,
+        "quality": [
+          "delayed"
+        ],
+        "record_id": "898bd6c3bdf5ebc5bd9e872e",
+        "region": "ap-south",
+        "request_id": "1c18168ce1f4515d3b58e2afab636a3f",
+        "schema_version": "1.0",
+        "service": "files",
+        "severity": "INFO",
+        "source_ip": "192.0.2.90",
+        "status_code": 200,
+        "timestamp_ms": 1767258680630,
+        "user_id": 25997
+      }
+    ],
+    "logs/system.log": [
+      {
+        "api_request_id": "5b630d3c1f25f15b1a116f8732b26cff",
+        "clock_drift_ms": 0,
+        "delivery_delay_ms": 70,
+        "destination_ip": "198.51.100.104",
+        "event_id": "39923b13a85998211c744ea4",
+        "instance_id": 103,
+        "is_duplicate": false,
+        "kind": "log",
+        "legacy_collector": "collector-v1",
+        "linked_trace_id": "a20e5ed5600f5bdcee17a5a93ba69ddd",
+        "log_category": "network",
+        "message": "replica connection recovered; resource=/org/55/items/0; correlation=5b630d3c1f25f15b1a116f8732b26cff",
+        "metadata": {
+          "environment": "production",
+          "sampling_weight": 1,
+          "tenant_tier": "team"
+        },
+        "observed_timestamp_ms": 1767225600000,
+        "optional_context": {
+          "zone": "ap-east-2"
+        },
+        "organization_id": 55,
+        "path": "/var/lib/service-103/segments/0000",
+        "pid": 1103,
+        "quality": [],
+        "record_id": "42beb6a45c285164abc6668f",
+        "region": "ap-east",
+        "request_id": "5b630d3c1f25f15b1a116f8732b26cff",
+        "schema_version": "1.0",
+        "service": "messages",
+        "severity": "INFO",
+        "source_ip": "192.0.2.56",
+        "status_code": 200,
+        "timestamp_ms": 1767225599930,
+        "user_id": 55
+      }
+    ],
+    "observability/logs.jsonl": [
+      {
+        "api_request_id": "5b630d3c1f25f15b1a116f8732b26cff",
+        "attributes": {
+          "http_status": 200,
+          "request_id": "5b630d3c1f25f15b1a116f8732b26cff"
+        },
+        "body": "request completed",
+        "clock_drift_ms": 0,
+        "delivery_delay_ms": 28,
+        "event_id": "5345ffe27878876623795d2a",
+        "instance_id": 103,
+        "is_duplicate": false,
+        "kind": "otel_log",
+        "legacy_collector": "collector-v1",
+        "linked_trace_id": "a20e5ed5600f5bdcee17a5a93ba69ddd",
+        "metadata": {
+          "environment": "production",
+          "sampling_weight": 1,
+          "tenant_tier": "team"
+        },
+        "observed_timestamp_ms": 1767225600000,
+        "optional_context": {
+          "zone": "ap-east-2"
+        },
+        "organization_id": 55,
+        "quality": [],
+        "record_id": "f5398fd0c40f70bce11cac2c",
+        "region": "ap-east",
+        "schema_version": "1.0",
+        "service": "messages",
+        "severity": "INFO",
+        "span_id": "f0fd1161b2180181",
+        "timestamp_ms": 1767225599972,
+        "trace_id": "e3fae353a0bd6c175f2e081fb831b158",
+        "user_id": 55
+      }
+    ],
+    "observability/metrics.jsonl": [
+      {
+        "api_request_id": "5b630d3c1f25f15b1a116f8732b26cff",
+        "clock_drift_ms": 0,
+        "cpu_percent": 26.346,
+        "delivery_delay_ms": 28,
+        "event_id": "5345ffe27878876623795d2a",
+        "instance_id": 103,
+        "is_duplicate": false,
+        "kind": "metric",
+        "legacy_collector": "collector-v1",
+        "linked_trace_id": "a20e5ed5600f5bdcee17a5a93ba69ddd",
+        "metadata": {
+          "environment": "production",
+          "sampling_weight": 1,
+          "tenant_tier": "team"
+        },
+        "metric_name": "service.resource.snapshot",
+        "observed_timestamp_ms": 1767225600000,
+        "optional_context": {
+          "zone": "ap-east-2"
+        },
+        "organization_id": 55,
+        "quality": [],
+        "queue_depth": 5,
+        "record_id": "d82d2f742edf3415e6651af4",
+        "region": "ap-east",
+        "request_latency_ms": 26.008,
+        "request_rate": 39.22,
+        "schema_version": "1.0",
+        "service": "messages",
+        "timestamp_ms": 1767225599972,
+        "trace_id": "e3fae353a0bd6c175f2e081fb831b158",
+        "user_id": 55
+      }
+    ],
+    "observability/traces.jsonl": [
+      {
+        "api_request_id": "5b630d3c1f25f15b1a116f8732b26cff",
+        "attributes": {
+          "attempt": 1,
+          "db_system": null,
+          "retry": false
+        },
+        "clock_drift_ms": 0,
+        "delivery_delay_ms": 28,
+        "duration_ms": 23.482,
+        "event_id": "e6804984d7b56d41631c23eb",
+        "instance_id": 103,
+        "is_duplicate": false,
+        "kind": "span",
+        "legacy_collector": "collector-v1",
+        "linked_trace_id": "a20e5ed5600f5bdcee17a5a93ba69ddd",
+        "metadata": {
+          "environment": "production",
+          "sampling_weight": 1,
+          "tenant_tier": "team"
+        },
+        "observed_timestamp_ms": 1767225600000,
+        "operation": "HTTP /api/messages",
+        "optional_context": {
+          "zone": "ap-east-2"
+        },
+        "organization_id": 55,
+        "parent_span_id": null,
+        "quality": [],
+        "record_id": "e6804984d7b56d41631c23eb",
+        "region": "ap-east",
+        "resource": {
+          "container": "59f9f9d733a8f3d3c64c0927",
+          "datacenter": "ap-east-dc1",
+          "host": "node-103",
+          "version": "1.8"
+        },
+        "schema_version": "1.0",
+        "service": "messages",
+        "span_end_ns": 1767225599995482000,
+        "span_id": "f0fd1161b2180181",
+        "span_service": "gateway",
+        "span_start_ns": 1767225599972000000,
+        "status": "OK",
+        "timestamp_ms": 1767225599972,
+        "trace_id": "e3fae353a0bd6c175f2e081fb831b158",
+        "user_id": 55
+      }
+    ],
+    "telemetry/telemetry.jsonl": [
+      {
+        "api_request_id": "5b630d3c1f25f15b1a116f8732b26cff",
+        "battery_level": 97.2,
+        "clock_drift_ms": 0,
+        "current": 1.1081,
+        "delivery_delay_ms": 34,
+        "device_id": 3732,
+        "device_region": "ap-south",
+        "device_type": "pump",
+        "error_code": null,
+        "event_id": "ade8839c7dcbdd818d4fea7f",
+        "fan_rpm": 1177.11,
+        "firmware_version": "2.3.1",
+        "humidity": 55.675,
+        "instance_id": 103,
+        "is_duplicate": false,
+        "kind": "telemetry",
+        "legacy_collector": "collector-v1",
+        "linked_trace_id": "a20e5ed5600f5bdcee17a5a93ba69ddd",
+        "metadata": {
+          "environment": "production",
+          "sampling_weight": 1,
+          "tenant_tier": "team"
+        },
+        "observed_timestamp_ms": 1767225600000,
+        "operating_state": "running",
+        "optional_context": {
+          "zone": "ap-east-2"
+        },
+        "organization_id": 55,
+        "power": 13.2213,
+        "pressure": 1012.953,
+        "quality": [],
+        "record_id": "1aaa60053c30f7297c1d3b4f",
+        "region": "ap-east",
+        "sample_sequence": 1,
+        "schema_version": "1.0",
+        "service": "messages",
+        "signal_strength": -62,
+        "temperature": 33.047,
+        "timestamp_ms": 1767225599966,
+        "user_id": 55,
+        "vibration": 0.02536,
+        "voltage": 11.9315
+      }
+    ],
+    "transactions/transactions.jsonl": [
+      {
+        "account_id": 55,
+        "amount_minor": 9900,
+        "api_request_id": "5b630d3c1f25f15b1a116f8732b26cff",
+        "category": "subscription",
+        "clock_drift_ms": 0,
+        "currency": "USD",
+        "customer_id": 55,
+        "delivery_delay_ms": 60,
+        "event_id": "7a908e6793c1baad20e4a3bc",
+        "instance_id": 103,
+        "is_duplicate": false,
+        "kind": "transaction",
+        "legacy_collector": "collector-v1",
+        "linked_trace_id": "a20e5ed5600f5bdcee17a5a93ba69ddd",
+        "merchant_id": 14,
+        "metadata": {
+          "environment": "production",
+          "sampling_weight": 1,
+          "tenant_tier": "team"
+        },
+        "observed_timestamp_ms": 1767225600000,
+        "optional_context": {
+          "zone": "ap-east-2"
+        },
+        "organization_id": 55,
+        "original_transaction_id": null,
+        "payment_method": "invoice",
+        "quality": [],
+        "record_id": "215d1a6df54df6c5dd60dfd8",
+        "recurring_plan_id": "c120e88440cc46d121b4db24",
+        "region": "ap-east",
+        "retry_attempt": 0,
+        "risk_score": 0.0045,
+        "schema_version": "1.0",
+        "service": "messages",
+        "status": "settled",
+        "timestamp_ms": 1767225599940,
+        "transaction_id": "0654c87a0ada8ca94eef01f8",
+        "user_id": 55
+      }
+    ]
+  }
+}

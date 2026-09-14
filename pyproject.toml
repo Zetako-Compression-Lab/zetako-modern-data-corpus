@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zetako-zmdc"
+version = "1.0.0"
+description = "Deterministic synthetic modern data corpus, independent of compression engines"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[project.scripts]
+zmdc = "zmdc.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["zmdc*"]

@@ -1,0 +1,19 @@
+test_alternative_logical_identity (test_corpus.CorpusTests.test_alternative_logical_identity) ... ok
+test_binary_nested_roundtrip_and_corruption (test_corpus.CorpusTests.test_binary_nested_roundtrip_and_corruption) ... ok
+test_broken_reference_with_valid_hash (test_corpus.CorpusTests.test_broken_reference_with_valid_hash) ... ok
+test_cross_process_hash_seed_independence (test_corpus.CorpusTests.test_cross_process_hash_seed_independence) ... ok
+test_determinism_byte_for_byte (test_corpus.CorpusTests.test_determinism_byte_for_byte) ... ok
+test_full_validation_and_stats (test_corpus.CorpusTests.test_full_validation_and_stats) ... ok
+test_no_overwrite (test_corpus.CorpusTests.test_no_overwrite) ... ok
+test_payload_checksum_detects_change (test_corpus.CorpusTests.test_payload_checksum_detects_change) ... ok
+test_rate_configuration_and_order (test_corpus.CorpusTests.test_rate_configuration_and_order) ... ok
+test_schema_error_with_valid_hash (test_corpus.CorpusTests.test_schema_error_with_valid_hash) ... ok
+test_select_workload_support_and_validation (test_corpus.CorpusTests.test_select_workload_support_and_validation) ... ok
+test_v1_frozen_golden (test_corpus.CorpusTests.test_v1_frozen_golden) ... ok
+test_wrong_cdc_before_image (test_corpus.CorpusTests.test_wrong_cdc_before_image) ... ok
+test_wrong_trace_parent (test_corpus.CorpusTests.test_wrong_trace_parent) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.493s
+
+OK

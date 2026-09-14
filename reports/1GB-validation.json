@@ -1,0 +1,887 @@
+{
+  "files": {
+    "api/events.jsonl": {
+      "bytes": 150000836,
+      "records": 151731,
+      "sha256": "183c13a452006cdd96094dfb942c6835177e9ac979c75f3c52227d27b038584f",
+      "zero_order_byte_entropy_bits": 4.953602140330843
+    },
+    "binary/records.bin": {
+      "bytes": 75000449,
+      "records": 66140,
+      "sha256": "5d100a1fd39001e771ec4c0aeaaf8a1781fe2c68e3dfbb756eb11deff3260cf0",
+      "zero_order_byte_entropy_bits": 5.306296644460024
+    },
+    "collaboration/events.jsonl": {
+      "bytes": 75000577,
+      "records": 80229,
+      "sha256": "02030a80ef46f933d73d4751068a5ae27dc19b4801167af5701d1b97c52da080",
+      "zero_order_byte_entropy_bits": 4.975182824890692
+    },
+    "database/cdc.jsonl": {
+      "bytes": 125000308,
+      "records": 128412,
+      "sha256": "b4423ecb403bbe543986a159161e90f6de0e91da5b5392f295737d27020f53d8",
+      "zero_order_byte_entropy_bits": 4.965910209154543
+    },
+    "entropy-control/control.bin": {
+      "bytes": 50033610,
+      "records": 1483,
+      "sha256": "1f44070c4ff4a3de26b46505c10ed27ba868162e4b983c87bfeea348a3dd2855",
+      "zero_order_byte_entropy_bits": 7.992473507064581
+    },
+    "logs/application.log": {
+      "bytes": 56287629,
+      "records": 53671,
+      "sha256": "42c3bbe15f3d57521cdbef717b5cfd93196a719a942df2625bb3546d04ae95bc",
+      "zero_order_byte_entropy_bits": 5.121916551737771
+    },
+    "logs/audit.jsonl": {
+      "bytes": 24629665,
+      "records": 24639,
+      "sha256": "ab6f4c81cad8dd944df0acef02deef76a9196b489ea9dd56911eaf91e5e1178d",
+      "zero_order_byte_entropy_bits": 5.073408606902197
+    },
+    "logs/system.log": {
+      "bytes": 44083345,
+      "records": 42173,
+      "sha256": "9860b87996d6e006175d3bad1a0c539c0105ae1d330cf1efd7c422a89f97a4b8",
+      "zero_order_byte_entropy_bits": 5.123145801795004
+    },
+    "observability/logs.jsonl": {
+      "bytes": 24084117,
+      "records": 27949,
+      "sha256": "b631e6c870793332aac70542969c51e265af859fc735436120f3192938bdb719",
+      "zero_order_byte_entropy_bits": 4.990995691840519
+    },
+    "observability/metrics.jsonl": {
+      "bytes": 23144758,
+      "records": 27949,
+      "sha256": "18552719ff3e0656d001b83135c13ee5c5c790e77e984b74a0e01de9bcc2c4a7",
+      "zero_order_byte_entropy_bits": 4.951988517903918
+    },
+    "observability/traces.jsonl": {
+      "bytes": 102771904,
+      "records": 93904,
+      "sha256": "374a0d5dc5946cf7d1d28ff6b5caa48dbfa9a83eea2c2ea2042165a6bd8a8199",
+      "zero_order_byte_entropy_bits": 4.949206126113323
+    },
+    "telemetry/telemetry.jsonl": {
+      "bytes": 150000551,
+      "records": 148967,
+      "sha256": "c3b8d8a1dd1a2cfb814d5b613a3d56628a4c46d32276d01852fbea4d22af95e6",
+      "zero_order_byte_entropy_bits": 4.9397089878201
+    },
+    "transactions/transactions.jsonl": {
+      "bytes": 100000058,
+      "records": 104305,
+      "sha256": "4f28c7e420e86ed685e51f3436d9cfe15bc8ae3258660009c6473b7b2c6a0ca5",
+      "zero_order_byte_entropy_bits": 4.917645236653104
+    }
+  },
+  "global_sha256": "34b3479f61272231502cfa3f923d5780548b4f08d9dd733306f5d70b30589a7f",
+  "primary_bytes": 1000037807,
+  "records": 951552,
+  "valid": true,
+  "warnings": [],
+  "workloads": {
+    "api": {
+      "cardinality": {
+        "device_id": 0,
+        "event_type": 0,
+        "firmware_version": 0,
+        "kind": 1,
+        "operation": 0,
+        "organization_id": 500,
+        "region": 8,
+        "request_id": 150172,
+        "schema_version": 6,
+        "service": 9,
+        "session_id": 77455,
+        "severity": 0,
+        "status_code": 10,
+        "trace_id": 150172,
+        "user_id": 25391
+      },
+      "duplicate_rate": 0.010274762573238165,
+      "missing_metadata_rate": 0.025690201738603147,
+      "null_rates": {
+        "error_type": 0.8547561144393697,
+        "optional_context": 0.02016726970757459
+      },
+      "numeric": {
+        "latency_ms": {
+          "count": 151731,
+          "max": 3273.161,
+          "mean": 48.8361918395049,
+          "min": 1.793
+        }
+      },
+      "observed_time_range_ms": [
+        1767225600000,
+        1769817597353
+      ],
+      "out_of_order_event_rate": 0.03402073406225491,
+      "proportions": {
+        "event_type": {},
+        "kind": {
+          "api_request": 151731
+        },
+        "operation": {},
+        "schema_version": {
+          "1.0": 36878,
+          "1.1": 34677,
+          "1.2": 24728,
+          "1.3": 19774,
+          "1.4": 15836,
+          "2.0": 19838
+        },
+        "status_code": {
+          "200": 95677,
+          "201": 18511,
+          "204": 15505,
+          "400": 3106,
+          "401": 4605,
+          "403": 1582,
+          "404": 4593,
+          "429": 4556,
+          "500": 1785,
+          "503": 1811
+        }
+      },
+      "quality_counts": {
+        "anomaly": 772,
+        "clock_drift": 4612,
+        "delayed": 3904,
+        "missing": 3898,
+        "null": 3060,
+        "retry": 4500,
+        "unexpected_enum": 447
+      },
+      "quality_rates": {
+        "anomaly": 0.005087951704002478,
+        "clock_drift": 0.030395898003703924,
+        "delayed": 0.02572974540469647,
+        "missing": 0.025690201738603185,
+        "null": 0.02016726970757459,
+        "retry": 0.02965774956996263,
+        "unexpected_enum": 0.0029460031239496214
+      },
+      "record_size_bytes": {
+        "max": 1108,
+        "mean": 988.5971620828967,
+        "min": 852
+      },
+      "records": 151731,
+      "telemetry_continuity": {
+        "consecutive_device_pairs": 0,
+        "max_absolute_temperature_step": 0.0,
+        "mean_absolute_temperature_step": null
+      },
+      "unique_record_ids": 150172
+    },
+    "binary": {
+      "cardinality": {
+        "api_request_id": 53202,
+        "device_id": 5000,
+        "event_type": 0,
+        "firmware_version": 0,
+        "kind": 4,
+        "operation": 0,
+        "organization_id": 500,
+        "region": 8,
+        "schema_version": 6,
+        "service": 9,
+        "severity": 0,
+        "status_code": 0,
+        "user_id": 12110
+      },
+      "duplicate_rate": 0.00982763834290898,
+      "missing_metadata_rate": 0.02667069851829451,
+      "null_rates": {
+        "optional_context": 0.02083459328696704
+      },
+      "numeric": {},
+      "observed_time_range_ms": [
+        1767225600000,
+        1769817575736
+      ],
+      "out_of_order_event_rate": 0.0331267009374055,
+      "proportions": {
+        "event_type": {},
+        "kind": {
+          "binary_event": 16551,
+          "metric": 16521,
+          "telemetry": 16520,
+          "transaction": 16548
+        },
+        "operation": {},
+        "schema_version": {
+          "1.0": 16029,
+          "1.1": 15114,
+          "1.2": 10792,
+          "1.3": 8635,
+          "1.4": 6912,
+          "2.0": 8658
+        },
+        "status_code": {}
+      },
+      "quality_counts": {
+        "anomaly": 330,
+        "clock_drift": 2008,
+        "delayed": 1698,
+        "missing": 1764,
+        "null": 1378,
+        "retry": 1984,
+        "unexpected_enum": 195
+      },
+      "quality_rates": {
+        "anomaly": 0.004989416389476867,
+        "clock_drift": 0.030359842757786512,
+        "delayed": 0.025672815240399154,
+        "missing": 0.02667069851829453,
+        "null": 0.02083459328696704,
+        "retry": 0.029996976111279106,
+        "unexpected_enum": 0.0029482915028726945
+      },
+      "record_size_bytes": {
+        "max": 1247,
+        "mean": 1133.9649380102812,
+        "min": 981
+      },
+      "records": 66140,
+      "telemetry_continuity": {
+        "consecutive_device_pairs": 0,
+        "max_absolute_temperature_step": 0.0,
+        "mean_absolute_temperature_step": null
+      },
+      "unique_record_ids": 65490
+    },
+    "collaboration": {
+      "cardinality": {
+        "api_request_id": 61738,
+        "device_id": 0,
+        "event_type": 8,
+        "firmware_version": 0,
+        "kind": 1,
+        "message_id": 79427,
+        "operation": 0,
+        "organization_id": 500,
+        "region": 8,
+        "schema_version": 6,
+        "service": 9,
+        "severity": 0,
+        "status_code": 0,
+        "user_id": 13520
+      },
+      "duplicate_rate": 0.009996385346944373,
+      "missing_metadata_rate": 0.02558925076967178,
+      "null_rates": {
+        "file": 0.9007590771416819,
+        "meeting_duration_minutes": 0.938800184471949,
+        "optional_context": 0.020578593775318153,
+        "reaction": 0.8495805756023384,
+        "text": 0.5007914843759738
+      },
+      "numeric": {},
+      "observed_time_range_ms": [
+        1767225600000,
+        1769817584916
+      ],
+      "out_of_order_event_rate": 0.031908661456580535,
+      "proportions": {
+        "event_type": {
+          "access": 2421,
+          "channel": 3170,
+          "file_metadata": 7962,
+          "meeting": 4910,
+          "message": 30454,
+          "notification": 9597,
+          "presence": 9647,
+          "reaction": 12068
+        },
+        "kind": {
+          "collaboration": 80229
+        },
+        "operation": {},
+        "schema_version": {
+          "1.0": 19518,
+          "1.1": 18298,
+          "1.2": 13068,
+          "1.3": 10456,
+          "1.4": 8360,
+          "2.0": 10529
+        },
+        "status_code": {}
+      },
+      "quality_counts": {
+        "anomaly": 397,
+        "clock_drift": 2364,
+        "delayed": 1947,
+        "missing": 2053,
+        "null": 1651,
+        "retry": 2375,
+        "unexpected_enum": 224
+      },
+      "quality_rates": {
+        "anomaly": 0.004948335389946279,
+        "clock_drift": 0.029465654563811092,
+        "delayed": 0.024268032756235278,
+        "missing": 0.025589250769671813,
+        "null": 0.020578593775318153,
+        "retry": 0.029602762093507335,
+        "unexpected_enum": 0.002792007877450797
+      },
+      "record_size_bytes": {
+        "max": 1112,
+        "mean": 934.8312580239066,
+        "min": 744
+      },
+      "records": 80229,
+      "telemetry_continuity": {
+        "consecutive_device_pairs": 0,
+        "max_absolute_temperature_step": 0.0,
+        "mean_absolute_temperature_step": null
+      },
+      "unique_record_ids": 79427
+    },
+    "database": {
+      "cardinality": {
+        "api_request_id": 86202,
+        "device_id": 0,
+        "event_type": 0,
+        "firmware_version": 0,
+        "kind": 1,
+        "operation": 3,
+        "organization_id": 500,
+        "region": 8,
+        "schema_version": 6,
+        "service": 9,
+        "severity": 0,
+        "status_code": 0,
+        "transaction_id": 42367,
+        "user_id": 17390
+      },
+      "duplicate_rate": 0.010217113665389528,
+      "missing_metadata_rate": 0.024802977914836655,
+      "null_rates": {
+        "after": 0.31510294988007354,
+        "before": 0.3396878796374171,
+        "optional_context": 0.019896894371242563
+      },
+      "numeric": {},
+      "observed_time_range_ms": [
+        1767225600000,
+        1769817586435
+      ],
+      "out_of_order_event_rate": 0.0334781796093823,
+      "proportions": {
+        "event_type": {},
+        "kind": {
+          "cdc": 128412
+        },
+        "operation": {
+          "DELETE": 40463,
+          "INSERT": 43620,
+          "UPDATE": 44329
+        },
+        "schema_version": {
+          "1.0": 31091,
+          "1.1": 29338,
+          "1.2": 20972,
+          "1.3": 16775,
+          "1.4": 13476,
+          "2.0": 16760
+        },
+        "status_code": {}
+      },
+      "quality_counts": {
+        "anomaly": 637,
+        "clock_drift": 3842,
+        "delayed": 3247,
+        "missing": 3185,
+        "null": 2555,
+        "retry": 3881,
+        "unexpected_enum": 399
+      },
+      "quality_rates": {
+        "anomaly": 0.004960595582967324,
+        "clock_drift": 0.029919322181727565,
+        "delayed": 0.025285798834999845,
+        "missing": 0.02480297791483662,
+        "null": 0.019896894371242563,
+        "retry": 0.030223032115378624,
+        "unexpected_enum": 0.003107186244276236
+      },
+      "record_size_bytes": {
+        "max": 1167,
+        "mean": 973.4316730523627,
+        "min": 801
+      },
+      "records": 128412,
+      "telemetry_continuity": {
+        "consecutive_device_pairs": 0,
+        "max_absolute_temperature_step": 0.0,
+        "mean_absolute_temperature_step": null
+      },
+      "unique_record_ids": 127100
+    },
+    "entropy-control": {
+      "cardinality": {
+        "api_request_id": 1469,
+        "device_id": 0,
+        "event_type": 0,
+        "firmware_version": 0,
+        "kind": 1,
+        "operation": 0,
+        "organization_id": 432,
+        "region": 8,
+        "schema_version": 6,
+        "service": 9,
+        "severity": 0,
+        "status_code": 0,
+        "user_id": 787
+      },
+      "duplicate_rate": 0.006743088334457181,
+      "missing_metadata_rate": 0.023600809170600145,
+      "null_rates": {
+        "optional_context": 0.020903573836817263
+      },
+      "numeric": {},
+      "observed_time_range_ms": [
+        1767225600000,
+        1769817594114
+      ],
+      "out_of_order_event_rate": 0.006743088334457181,
+      "proportions": {
+        "event_type": {},
+        "kind": {
+          "control": 1483
+        },
+        "operation": {},
+        "schema_version": {
+          "1.0": 347,
+          "1.1": 345,
+          "1.2": 247,
+          "1.3": 198,
+          "1.4": 149,
+          "2.0": 197
+        },
+        "status_code": {}
+      },
+      "quality_counts": {
+        "anomaly": 7,
+        "clock_drift": 36,
+        "delayed": 41,
+        "missing": 35,
+        "null": 31,
+        "retry": 51,
+        "unexpected_enum": 7
+      },
+      "quality_rates": {
+        "anomaly": 0.004720161834120027,
+        "clock_drift": 0.024275118004045852,
+        "delayed": 0.027646662171274445,
+        "missing": 0.023600809170600135,
+        "null": 0.020903573836817263,
+        "retry": 0.03438975050573163,
+        "unexpected_enum": 0.004720161834120027
+      },
+      "record_size_bytes": {
+        "max": 33838,
+        "mean": 33738.09979770735,
+        "min": 33598
+      },
+      "records": 1483,
+      "telemetry_continuity": {
+        "consecutive_device_pairs": 0,
+        "max_absolute_temperature_step": 0.0,
+        "mean_absolute_temperature_step": null
+      },
+      "unique_record_ids": 1473
+    },
+    "logs": {
+      "cardinality": {
+        "api_request_id": 82551,
+        "device_id": 0,
+        "event_type": 0,
+        "firmware_version": 0,
+        "kind": 1,
+        "operation": 0,
+        "organization_id": 500,
+        "region": 8,
+        "request_id": 82551,
+        "schema_version": 6,
+        "service": 9,
+        "severity": 4,
+        "status_code": 10,
+        "user_id": 16911
+      },
+      "duplicate_rate": 0.009926711652266294,
+      "missing_metadata_rate": 0.024791879352273782,
+      "null_rates": {
+        "optional_context": 0.019704024634180757
+      },
+      "numeric": {},
+      "observed_time_range_ms": [
+        1767225600000,
+        1769817591597
+      ],
+      "out_of_order_event_rate": 0.03093382468896027,
+      "proportions": {
+        "event_type": {},
+        "kind": {
+          "log": 120483
+        },
+        "operation": {},
+        "schema_version": {
+          "1.0": 29204,
+          "1.1": 27543,
+          "1.2": 19674,
+          "1.3": 15726,
+          "1.4": 12599,
+          "2.0": 15737
+        },
+        "status_code": {
+          "200": 76060,
+          "201": 14568,
+          "204": 12405,
+          "400": 2457,
+          "401": 3651,
+          "403": 1288,
+          "404": 3658,
+          "429": 3611,
+          "500": 1382,
+          "503": 1403
+        }
+      },
+      "quality_counts": {
+        "anomaly": 629,
+        "clock_drift": 3674,
+        "delayed": 3090,
+        "missing": 2987,
+        "null": 2374,
+        "retry": 3634,
+        "unexpected_enum": 390
+      },
+      "quality_rates": {
+        "anomaly": 0.005220653536183528,
+        "clock_drift": 0.030493928604035422,
+        "delayed": 0.02564677174373148,
+        "missing": 0.024791879352273765,
+        "null": 0.019704024634180757,
+        "retry": 0.030161931558809127,
+        "unexpected_enum": 0.0032369711909564004
+      },
+      "record_size_bytes": {
+        "max": 1328,
+        "mean": 1037.496069984977,
+        "min": 808
+      },
+      "records": 120483,
+      "telemetry_continuity": {
+        "consecutive_device_pairs": 0,
+        "max_absolute_temperature_step": 0.0,
+        "mean_absolute_temperature_step": null
+      },
+      "unique_record_ids": 119287
+    },
+    "observability": {
+      "cardinality": {
+        "api_request_id": 25407,
+        "device_id": 0,
+        "event_type": 0,
+        "firmware_version": 0,
+        "kind": 3,
+        "operation": 20,
+        "organization_id": 500,
+        "region": 8,
+        "schema_version": 6,
+        "service": 9,
+        "severity": 2,
+        "status_code": 0,
+        "trace_id": 27673,
+        "user_id": 6888
+      },
+      "duplicate_rate": 0.009873032402771658,
+      "missing_metadata_rate": 0.02397831804648798,
+      "null_rates": {
+        "optional_context": 0.020860869681312667,
+        "parent_span_id": 0.29763375362071903
+      },
+      "numeric": {
+        "cpu_percent": {
+          "count": 27949,
+          "max": 85.191,
+          "mean": 32.047815413789344,
+          "min": 16.861
+        },
+        "duration_ms": {
+          "count": 93904,
+          "max": 991.549,
+          "mean": 30.920798059720674,
+          "min": 0.345
+        }
+      },
+      "observed_time_range_ms": [
+        1767225600000,
+        1769817525930
+      ],
+      "out_of_order_event_rate": 0.017262786878679857,
+      "proportions": {
+        "event_type": {},
+        "kind": {
+          "metric": 27949,
+          "otel_log": 27949,
+          "span": 93904
+        },
+        "operation": {
+          "HTTP /api/auth": 4180,
+          "HTTP /api/devices": 575,
+          "HTTP /api/files": 5848,
+          "HTTP /api/messages": 8347,
+          "HTTP /api/notifications": 1120,
+          "HTTP /api/search": 2249,
+          "HTTP /api/transactions": 808,
+          "HTTP /api/users": 1712,
+          "HTTP /api/workspaces": 3110,
+          "auth.execute": 4300,
+          "database.execute": 27949,
+          "devices.execute": 595,
+          "files.execute": 6020,
+          "messages.execute": 8591,
+          "notifications.execute": 1151,
+          "payments.execute": 837,
+          "search.execute": 2315,
+          "storage.execute": 9211,
+          "users.execute": 1759,
+          "workspaces.execute": 3227
+        },
+        "schema_version": {
+          "1.0": 36353,
+          "1.1": 34223,
+          "1.2": 24440,
+          "1.3": 19544,
+          "1.4": 15617,
+          "2.0": 19625
+        },
+        "status_code": {}
+      },
+      "quality_counts": {
+        "anomaly": 758,
+        "clock_drift": 4456,
+        "delayed": 3741,
+        "missing": 3592,
+        "null": 3125,
+        "retry": 5339,
+        "unexpected_enum": 448
+      },
+      "quality_rates": {
+        "anomaly": 0.0050600125498992,
+        "clock_drift": 0.029745931295977357,
+        "delayed": 0.024972964312893017,
+        "missing": 0.02397831804648803,
+        "null": 0.020860869681312667,
+        "retry": 0.03564037863312906,
+        "unexpected_enum": 0.002990614277512984
+      },
+      "record_size_bytes": {
+        "max": 1220,
+        "mean": 1001.3269449006021,
+        "min": 704
+      },
+      "records": 149802,
+      "telemetry_continuity": {
+        "consecutive_device_pairs": 0,
+        "max_absolute_temperature_step": 0.0,
+        "mean_absolute_temperature_step": null
+      },
+      "unique_record_ids": 148323
+    },
+    "telemetry": {
+      "cardinality": {
+        "api_request_id": 94109,
+        "device_id": 5000,
+        "event_type": 0,
+        "firmware_version": 2,
+        "kind": 1,
+        "operation": 0,
+        "organization_id": 500,
+        "region": 8,
+        "schema_version": 6,
+        "service": 9,
+        "severity": 0,
+        "status_code": 0,
+        "user_id": 18389
+      },
+      "duplicate_rate": 0.00986124443668732,
+      "missing_metadata_rate": 0.02512637026992559,
+      "null_rates": {
+        "error_code": 0.9992615814240738,
+        "humidity": 0.0007384185759262118,
+        "optional_context": 0.02038706559170823
+      },
+      "numeric": {
+        "humidity": {
+          "count": 148857,
+          "max": 62.995,
+          "mean": 57.42718918156297,
+          "min": 42.023
+        },
+        "power": {
+          "count": 148967,
+          "max": 22.0224,
+          "mean": 11.953287524753833,
+          "min": 8.1877
+        },
+        "temperature": {
+          "count": 148967,
+          "max": 59.122,
+          "mean": 29.14731977552021,
+          "min": 18.44
+        }
+      },
+      "observed_time_range_ms": [
+        1767225600000,
+        1769817592152
+      ],
+      "out_of_order_event_rate": 0.03357119362006351,
+      "proportions": {
+        "event_type": {},
+        "kind": {
+          "telemetry": 148967
+        },
+        "operation": {},
+        "schema_version": {
+          "1.0": 36156,
+          "1.1": 34017,
+          "1.2": 24302,
+          "1.3": 19436,
+          "1.4": 15572,
+          "2.0": 19484
+        },
+        "status_code": {}
+      },
+      "quality_counts": {
+        "anomaly": 735,
+        "clock_drift": 4458,
+        "delayed": 3838,
+        "missing": 3743,
+        "null": 3037,
+        "retry": 4437,
+        "unexpected_enum": 453
+      },
+      "quality_rates": {
+        "anomaly": 0.004933978666416052,
+        "clock_drift": 0.02992609101344593,
+        "delayed": 0.02576409540368001,
+        "missing": 0.025126370269925553,
+        "null": 0.02038706559170823,
+        "retry": 0.029785120194405473,
+        "unexpected_enum": 0.003040941953587036
+      },
+      "record_size_bytes": {
+        "max": 1117,
+        "mean": 1006.9381205233374,
+        "min": 878
+      },
+      "records": 148967,
+      "telemetry_continuity": {
+        "consecutive_device_pairs": 142498,
+        "max_absolute_temperature_step": 12.553,
+        "mean_absolute_temperature_step": 0.22163145447655475
+      },
+      "unique_record_ids": 147498
+    },
+    "transactions": {
+      "cardinality": {
+        "api_request_id": 74839,
+        "device_id": 0,
+        "event_type": 0,
+        "firmware_version": 0,
+        "kind": 1,
+        "operation": 0,
+        "organization_id": 500,
+        "region": 8,
+        "schema_version": 6,
+        "service": 9,
+        "severity": 0,
+        "status_code": 0,
+        "transaction_id": 103220,
+        "user_id": 15635
+      },
+      "duplicate_rate": 0.010402185897128614,
+      "missing_metadata_rate": 0.024543406356358766,
+      "null_rates": {
+        "optional_context": 0.019558026940223384,
+        "original_transaction_id": 0.9652557403767796,
+        "recurring_plan_id": 0.8071521020085327
+      },
+      "numeric": {
+        "amount_minor": {
+          "count": 104305,
+          "max": 397330,
+          "mean": 3086.7729351421312,
+          "min": -51652
+        },
+        "risk_score": {
+          "count": 104305,
+          "max": 0.9998,
+          "mean": 0.08120234983941563,
+          "min": 0.0
+        }
+      },
+      "observed_time_range_ms": [
+        1767225600000,
+        1769817576131
+      ],
+      "out_of_order_event_rate": 0.03429365802214659,
+      "proportions": {
+        "event_type": {},
+        "kind": {
+          "transaction": 104305
+        },
+        "operation": {},
+        "schema_version": {
+          "1.0": 25349,
+          "1.1": 23800,
+          "1.2": 17002,
+          "1.3": 13595,
+          "1.4": 10883,
+          "2.0": 13676
+        },
+        "status_code": {}
+      },
+      "quality_counts": {
+        "anomaly": 545,
+        "clock_drift": 3238,
+        "delayed": 2711,
+        "missing": 2560,
+        "null": 2040,
+        "retry": 3105,
+        "unexpected_enum": 307
+      },
+      "quality_rates": {
+        "anomaly": 0.005225061118834189,
+        "clock_drift": 0.031043574133550644,
+        "delayed": 0.025991083840659603,
+        "missing": 0.024543406356358755,
+        "null": 0.019558026940223384,
+        "retry": 0.029768467475192944,
+        "unexpected_enum": 0.00294329130914146
+      },
+      "record_size_bytes": {
+        "max": 1087,
+        "mean": 958.7273668568141,
+        "min": 822
+      },
+      "records": 104305,
+      "telemetry_continuity": {
+        "consecutive_device_pairs": 0,
+        "max_absolute_temperature_step": 0.0,
+        "mean_absolute_temperature_step": null
+      },
+      "unique_record_ids": 103220
+    }
+  }
+}

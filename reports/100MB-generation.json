@@ -1,0 +1,9 @@
+{
+  "corpus": "outputs/ZMDC-100M-v1",
+  "generation_seconds": 2.537017582999397,
+  "global_sha256": "b6508d60abe7f552e8a9b5c757787917e629180c7f25cbe99c9b33f298180184",
+  "peak_rss_bytes": 34373632,
+  "primary_bytes": 100034935,
+  "records": 95083,
+  "total_bytes": 100035353
+}

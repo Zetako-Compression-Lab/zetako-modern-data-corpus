@@ -1,0 +1,430 @@
+{
+  "configuration": {
+    "days": 30,
+    "devices": 5000,
+    "instances": 240,
+    "organizations": 500,
+    "rates": {
+      "anomaly": 0.005,
+      "clock_drift": 0.03,
+      "delayed": 0.025,
+      "duplicate": 0.01,
+      "missing": 0.025,
+      "null": 0.02,
+      "retry": 0.03,
+      "unexpected_enum": 0.003
+    },
+    "seed": 20260914,
+    "size": 100000000,
+    "users": 50000,
+    "version": "1.0"
+  },
+  "files": [
+    {
+      "bytes": 418,
+      "format": "text",
+      "path": "README.txt",
+      "records": 0,
+      "role": "metadata",
+      "schemas": {},
+      "sha256": "20a29b90fead18c6955d6f7b6e95dc6158612bf9f0571aa6552704b87c4e897a",
+      "workload": "metadata"
+    },
+    {
+      "bytes": 15000452,
+      "format": "jsonl",
+      "max_observed_ms": 1769817332880,
+      "min_observed_ms": 1767225600000,
+      "path": "api/events.jsonl",
+      "records": 15174,
+      "role": "primary",
+      "schemas": {
+        "1.0": 3687,
+        "1.1": 3469,
+        "1.2": 2474,
+        "1.3": 1976,
+        "1.4": 1583,
+        "2.0": 1985
+      },
+      "sha256": "4dc2685fddedde4ffedeb6e3a27237700ddfcd104638d94f13584781e95eb93c",
+      "workload": "api"
+    },
+    {
+      "bytes": 7500341,
+      "format": "binary",
+      "max_observed_ms": 1769817317040,
+      "min_observed_ms": 1767225600000,
+      "path": "binary/records.bin",
+      "records": 6614,
+      "role": "primary",
+      "schemas": {
+        "1.0": 1603,
+        "1.1": 1511,
+        "1.2": 1080,
+        "1.3": 863,
+        "1.4": 699,
+        "2.0": 858
+      },
+      "sha256": "99105388cf5fe01c5e95654960d4d670d95d40cf3e0edb0bde547a0abc32fedb",
+      "workload": "binary"
+    },
+    {
+      "bytes": 7500742,
+      "format": "jsonl",
+      "max_observed_ms": 1769817523320,
+      "min_observed_ms": 1767225600000,
+      "path": "collaboration/events.jsonl",
+      "records": 8027,
+      "role": "primary",
+      "schemas": {
+        "1.0": 1959,
+        "1.1": 1826,
+        "1.2": 1305,
+        "1.3": 1045,
+        "1.4": 834,
+        "2.0": 1058
+      },
+      "sha256": "a3fd4db35fdec85c088bf1a41eedd7b3e45fca6ca703406544aed6c313b575d5",
+      "workload": "collaboration"
+    },
+    {
+      "bytes": 12500854,
+      "format": "jsonl",
+      "max_observed_ms": 1769817584448,
+      "min_observed_ms": 1767225600000,
+      "path": "database/cdc.jsonl",
+      "records": 12748,
+      "role": "primary",
+      "schemas": {
+        "1.0": 3085,
+        "1.1": 2913,
+        "1.2": 2082,
+        "1.3": 1669,
+        "1.4": 1318,
+        "2.0": 1681
+      },
+      "sha256": "f9099f0a8b645539684a1b194e435b0f9904a504758bd79a4cd1e5afe902c32b",
+      "workload": "database"
+    },
+    {
+      "bytes": 5027175,
+      "format": "binary",
+      "max_observed_ms": 1769814057600,
+      "min_observed_ms": 1767225600000,
+      "path": "entropy-control/control.bin",
+      "records": 149,
+      "role": "primary",
+      "schemas": {
+        "1.0": 35,
+        "1.1": 35,
+        "1.2": 24,
+        "1.3": 20,
+        "1.4": 17,
+        "2.0": 18
+      },
+      "sha256": "d4b412c9bd0388531bfec33808c77ec36ec4b44d7f999a21216cd020e7505a7c",
+      "workload": "entropy-control"
+    },
+    {
+      "bytes": 5621753,
+      "format": "log",
+      "max_observed_ms": 1769817363696,
+      "min_observed_ms": 1767228131087,
+      "path": "logs/application.log",
+      "records": 5358,
+      "role": "primary",
+      "schemas": {
+        "1.0": 1310,
+        "1.1": 1237,
+        "1.2": 883,
+        "1.3": 695,
+        "1.4": 537,
+        "2.0": 696
+      },
+      "sha256": "bc13301b7cfc01fc3160300b4e0565cca84b425643cd13ec918e1326866dd493",
+      "workload": "logs"
+    },
+    {
+      "bytes": 2506356,
+      "format": "jsonl",
+      "max_observed_ms": 1769817599135,
+      "min_observed_ms": 1767231406728,
+      "path": "logs/audit.jsonl",
+      "records": 2507,
+      "role": "primary",
+      "schemas": {
+        "1.0": 595,
+        "1.1": 545,
+        "1.2": 422,
+        "1.3": 338,
+        "1.4": 265,
+        "2.0": 342
+      },
+      "sha256": "b606d135b34b3ccbcc65dd99d834e59dbdb99a64c26c69d5bb28bb95ece678b4",
+      "workload": "logs"
+    },
+    {
+      "bytes": 4372868,
+      "format": "log",
+      "max_observed_ms": 1769816710944,
+      "min_observed_ms": 1767225600000,
+      "path": "logs/system.log",
+      "records": 4186,
+      "role": "primary",
+      "schemas": {
+        "1.0": 1015,
+        "1.1": 974,
+        "1.2": 659,
+        "1.3": 545,
+        "1.4": 444,
+        "2.0": 549
+      },
+      "sha256": "3f72269339ec52368c32a15733aed77747e898b62fab1c42917c5319086eccfd",
+      "workload": "logs"
+    },
+    {
+      "bytes": 2411362,
+      "format": "jsonl",
+      "max_observed_ms": 1769817339360,
+      "min_observed_ms": 1767225600000,
+      "path": "observability/logs.jsonl",
+      "records": 2799,
+      "role": "primary",
+      "schemas": {
+        "1.0": 681,
+        "1.1": 639,
+        "1.2": 459,
+        "1.3": 362,
+        "1.4": 289,
+        "2.0": 369
+      },
+      "sha256": "d73be62d6011f0de07ced0cd0b85ecf321e0ab1f95766d2ab9d30192686b77f1",
+      "workload": "observability"
+    },
+    {
+      "bytes": 2317693,
+      "format": "jsonl",
+      "max_observed_ms": 1769817339360,
+      "min_observed_ms": 1767225600000,
+      "path": "observability/metrics.jsonl",
+      "records": 2799,
+      "role": "primary",
+      "schemas": {
+        "1.0": 681,
+        "1.1": 639,
+        "1.2": 459,
+        "1.3": 362,
+        "1.4": 289,
+        "2.0": 369
+      },
+      "sha256": "9f3ea9bb58682c27e265dc7c356be5dda93d59c7a2ad543ec2312c4b96e84070",
+      "workload": "observability"
+    },
+    {
+      "bytes": 10274401,
+      "format": "jsonl",
+      "max_observed_ms": 1769817339360,
+      "min_observed_ms": 1767225600000,
+      "path": "observability/traces.jsonl",
+      "records": 9388,
+      "role": "primary",
+      "schemas": {
+        "1.0": 2274,
+        "1.1": 2142,
+        "1.2": 1533,
+        "1.3": 1230,
+        "1.4": 969,
+        "2.0": 1240
+      },
+      "sha256": "76b5072e854f49b65bce6bb224eba7e4d8b2ded686d3f4bc42aaa19902b5da96",
+      "workload": "observability"
+    },
+    {
+      "bytes": 15000602,
+      "format": "jsonl",
+      "max_observed_ms": 1769817530340,
+      "min_observed_ms": 1767225600000,
+      "path": "telemetry/telemetry.jsonl",
+      "records": 14905,
+      "role": "primary",
+      "schemas": {
+        "1.0": 3616,
+        "1.1": 3404,
+        "1.2": 2432,
+        "1.3": 1944,
+        "1.4": 1565,
+        "2.0": 1944
+      },
+      "sha256": "448d1a1290ce1bfebd37d386087a28b1b7153989248d4128db7813f6b4143d8b",
+      "workload": "telemetry"
+    },
+    {
+      "bytes": 10000336,
+      "format": "jsonl",
+      "max_observed_ms": 1769817439619,
+      "min_observed_ms": 1767225600000,
+      "path": "transactions/transactions.jsonl",
+      "records": 10429,
+      "role": "primary",
+      "schemas": {
+        "1.0": 2535,
+        "1.1": 2380,
+        "1.2": 1700,
+        "1.3": 1359,
+        "1.4": 1092,
+        "2.0": 1363
+      },
+      "sha256": "4dd4c08825f0832dc8323c6c01743d485800e6e7b07fdf9dfe0b6e7bd63866d5",
+      "workload": "transactions"
+    }
+  ],
+  "generator_version": "1.0.0",
+  "git_commit": null,
+  "global_sha256": "b6508d60abe7f552e8a9b5c757787917e629180c7f25cbe99c9b33f298180184",
+  "implementation_sha256": "9aa823da5b7cd3b3b1b6bf395fcddae24bf5b4ebdc95940e65c96d080c2caad1",
+  "logical_time_range": {
+    "end_exclusive_ms": 1769817600000,
+    "start_ms": 1767225600000
+  },
+  "name": "ZMDC-development",
+  "number_of_files": 14,
+  "primary_bytes": 100034935,
+  "python_implementation": "CPython",
+  "python_version": "3.12.10",
+  "records": 95083,
+  "seed": 20260914,
+  "selected_workloads": [
+    "api",
+    "telemetry",
+    "observability",
+    "logs",
+    "database",
+    "transactions",
+    "collaboration",
+    "binary",
+    "entropy-control"
+  ],
+  "specification_sha256": "37d8e70f7df68f989028fdf263c31f1238f97c51fc9cbe4e7e7c688ec7165700",
+  "target_primary_bytes": 100000000,
+  "total_bytes": 100035353,
+  "version": "1.0",
+  "workloads": {
+    "api": {
+      "bytes": 15000452,
+      "files": 1,
+      "max_emission_unit_bytes": 1098,
+      "overshoot_bytes": 452,
+      "records": 15174,
+      "role": "primary",
+      "target_bytes": 15000000
+    },
+    "binary": {
+      "bytes": 7500341,
+      "files": 1,
+      "max_emission_unit_bytes": 1228,
+      "overshoot_bytes": 341,
+      "records": 6614,
+      "role": "primary",
+      "target_bytes": 7500000
+    },
+    "collaboration": {
+      "bytes": 7500742,
+      "files": 1,
+      "max_emission_unit_bytes": 1107,
+      "overshoot_bytes": 742,
+      "records": 8027,
+      "role": "primary",
+      "target_bytes": 7500000
+    },
+    "database": {
+      "bytes": 12500854,
+      "files": 1,
+      "max_emission_unit_bytes": 1163,
+      "overshoot_bytes": 854,
+      "records": 12748,
+      "role": "primary",
+      "target_bytes": 12500000
+    },
+    "entropy-control": {
+      "bytes": 5027175,
+      "files": 1,
+      "max_emission_unit_bytes": 33840,
+      "overshoot_bytes": 27175,
+      "records": 149,
+      "role": "primary",
+      "target_bytes": 5000000
+    },
+    "logs": {
+      "bytes": 12500977,
+      "files": 3,
+      "max_emission_unit_bytes": 1288,
+      "overshoot_bytes": 977,
+      "records": 12051,
+      "role": "primary",
+      "target_bytes": 12500000
+    },
+    "observability": {
+      "bytes": 15003456,
+      "files": 3,
+      "max_emission_unit_bytes": 7515,
+      "overshoot_bytes": 3456,
+      "records": 14986,
+      "role": "primary",
+      "target_bytes": 15000000
+    },
+    "telemetry": {
+      "bytes": 15000602,
+      "files": 1,
+      "max_emission_unit_bytes": 1102,
+      "overshoot_bytes": 602,
+      "records": 14905,
+      "role": "primary",
+      "target_bytes": 15000000
+    },
+    "transactions": {
+      "bytes": 10000336,
+      "files": 1,
+      "max_emission_unit_bytes": 1058,
+      "overshoot_bytes": 336,
+      "records": 10429,
+      "role": "primary",
+      "target_bytes": 10000000
+    }
+  },
+  "world": {
+    "instance_service_rule": "services[(instance_id-1) % 20]",
+    "organization_rule": "(user_id-1) % organizations + 1",
+    "regions": [
+      "us-east",
+      "us-west",
+      "eu-west",
+      "eu-central",
+      "ap-south",
+      "ap-east",
+      "ap-southeast",
+      "sa-east"
+    ],
+    "services": [
+      "gateway",
+      "auth",
+      "messages",
+      "files",
+      "workspaces",
+      "search",
+      "users",
+      "notifications",
+      "billing",
+      "payments",
+      "database",
+      "storage",
+      "metrics",
+      "scheduler",
+      "presence",
+      "meetings",
+      "audit",
+      "devices",
+      "edge",
+      "security"
+    ]
+  }
+}

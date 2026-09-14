@@ -1,0 +1,43 @@
+{
+  "compression_comparisons_performed": false,
+  "default_configuration": {
+    "days": 30,
+    "devices": 5000,
+    "instances": 240,
+    "organizations": 500,
+    "rates": {
+      "anomaly": 0.005,
+      "clock_drift": 0.03,
+      "delayed": 0.025,
+      "duplicate": 0.01,
+      "missing": 0.025,
+      "null": 0.02,
+      "retry": 0.03,
+      "unexpected_enum": 0.003
+    },
+    "seed": 20260914,
+    "size": 1000000000,
+    "users": 50000,
+    "version": "1.0"
+  },
+  "generator_version": "1.0.0",
+  "git_commit": null,
+  "implementation_sha256": "9aa823da5b7cd3b3b1b6bf395fcddae24bf5b4ebdc95940e65c96d080c2caad1",
+  "name": "ZMDC-1G",
+  "python_implementation": "CPython",
+  "python_version": "3.12.10",
+  "specification_sha256": "37d8e70f7df68f989028fdf263c31f1238f97c51fc9cbe4e7e7c688ec7165700",
+  "status": "local frozen v1 candidate; not published",
+  "version": "1.0",
+  "weights_per_thousand": {
+    "api": 150,
+    "binary": 75,
+    "collaboration": 75,
+    "database": 125,
+    "entropy-control": 50,
+    "logs": 125,
+    "observability": 150,
+    "telemetry": 150,
+    "transactions": 100
+  }
+}

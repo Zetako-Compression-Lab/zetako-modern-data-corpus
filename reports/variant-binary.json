@@ -1,0 +1,7 @@
+{
+  "bytes": 1808724,
+  "format": "binary",
+  "logical_roundtrip_verified": true,
+  "source": "outputs/ZMDC-10M-v1/telemetry/telemetry.jsonl",
+  "target": "variants/telemetry-10MB.bin"
+}
