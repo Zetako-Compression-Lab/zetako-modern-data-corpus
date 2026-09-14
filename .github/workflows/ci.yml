@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reference-runtime:
+    name: Reference runtime (CPython 3.12.10)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.10'
+      - run: python -m pip install -e .
+      - run: python -m unittest discover -s tests -v
+      - name: Reproduce and validate 10 MB corpus
+        run: |
+          python -m zmdc generate --version 1.0 --seed 20260914 --size 10MB --output /tmp/ZMDC-10M-ci
+          python -m zmdc validate /tmp/ZMDC-10M-ci
+
+  compatibility:
+    name: ${{ matrix.os }} / Python ${{ matrix.python }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ['3.11', '3.12', '3.13']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -e .
+      - name: Run compatibility tests (excluding frozen reference hash)
+        shell: python
+        run: |
+          import unittest
+          loader = unittest.TestLoader()
+          suite = loader.discover('tests')
+          filtered = unittest.TestSuite()
+          def add(node):
+              if isinstance(node, unittest.TestSuite):
+                  for child in node:
+                      add(child)
+              elif not node.id().endswith('test_v1_frozen_golden'):
+                  filtered.addTest(node)
+          add(suite)
+          result = unittest.TextTestRunner(verbosity=2).run(filtered)
+          raise SystemExit(0 if result.wasSuccessful() else 1)
+      - name: Generate and validate a compatibility corpus
+        shell: bash
+        run: |
+          python -m zmdc generate --version 1.0 --seed 20260914 --size 1MB --output zmdc-ci-output
+          python -m zmdc validate zmdc-ci-output
