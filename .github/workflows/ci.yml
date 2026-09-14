@@ -48,8 +48,7 @@ jobs:
           # The golden corpus hash is guaranteed only for CPython 3.12.10.
           # Four negative validator tests deliberately abort with a live SQLite
           # index; Windows keeps that file locked during TemporaryDirectory
-          # cleanup. We leave frozen v1 code untouched and exercise the clean
-          # generation/validation path separately on every compatibility job.
+          # cleanup. Frozen v1 remains untouched.
           skipped = {'test_v1_frozen_golden'}
           if os.name == 'nt':
               skipped.update({
@@ -74,7 +73,17 @@ jobs:
           result = unittest.TextTestRunner(verbosity=2).run(filtered)
           raise SystemExit(0 if result.wasSuccessful() else 1)
 
-      - name: Generate and validate a compatibility corpus
+      - name: Generate and validate a compatibility corpus through the library API
+        shell: python
         run: |
-          python -m zmdc generate --version 1.0 --seed 20260914 --size 1MB --output zmdc-ci-output
-          python -m zmdc validate zmdc-ci-output
+          from pathlib import Path
+          from zmdc.config import Config
+          from zmdc.generation import generate
+          from zmdc.validation import validate
+
+          root = Path('zmdc-ci-output')
+          manifest = generate(Config(size=1_000_000, seed=20260914, version='1.0'), root)
+          result = validate(root)
+          assert result['valid']
+          assert result['records'] == manifest['records']
+          print('Compatibility corpus valid:', manifest['global_sha256'])
