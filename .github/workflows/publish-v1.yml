@@ -15,6 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Refuse to mutate an existing v1.0 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v1.0.0 >/dev/null 2>&1; then
+            echo 'ZMDC-1G v1.0 already exists. Published v1 assets are immutable by policy.' >&2
+            exit 1
+          fi
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12.10'
@@ -90,21 +99,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if gh release view v1.0.0 >/dev/null 2>&1; then
-            gh release upload v1.0.0 \
-              dist/ZMDC-1G-v1.tar.zst \
-              dist/ZMDC-1G-v1.manifest.json \
-              dist/SHA256SUMS \
-              --clobber
-            gh release edit v1.0.0 \
-              --title 'ZMDC-1G v1.0' \
-              --notes-file RELEASE_NOTES_v1.0.md
-          else
-            gh release create v1.0.0 \
-              --target "$GITHUB_SHA" \
-              --title 'ZMDC-1G v1.0' \
-              --notes-file RELEASE_NOTES_v1.0.md \
-              dist/ZMDC-1G-v1.tar.zst \
-              dist/ZMDC-1G-v1.manifest.json \
-              dist/SHA256SUMS
-          fi
+          gh release create v1.0.0 \
+            --target "$GITHUB_SHA" \
+            --title 'ZMDC-1G v1.0' \
+            --notes-file RELEASE_NOTES_v1.0.md \
+            dist/ZMDC-1G-v1.tar.zst \
+            dist/ZMDC-1G-v1.manifest.json \
+            dist/SHA256SUMS
